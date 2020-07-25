@@ -10,6 +10,7 @@ import UIKit
 
 class MenuTableCell: UITableViewCell {
 
+    @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet private weak var titleLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,9 +22,8 @@ class MenuTableCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    func setupCell(title:String){
-        self.titleLbl.text = title
+    func setupCell(title:String, imageName:String){
+        titleLbl.text = title
+        imageView?.image = UIImage(named: imageName)
     }
-    
 }

@@ -15,6 +15,7 @@ class MenuVC: UIViewController {
     @IBOutlet private weak var emailLbl: UILabel!
     var sections = [String]()
     var rows = [[String]]()
+    var imagesName = [[String]]()
     var selectionHandler:(_ index:IndexPath)->Void = {_ in }
     var email = ""
     override func viewDidLoad() {
@@ -25,7 +26,8 @@ class MenuVC: UIViewController {
     }
     
     private func setupTableView(){
-        menuTable.register(MenuTableCell.self, forCellReuseIdentifier: "MenuCell")
+        let nibName = UINib(nibName: "MenuTableCell", bundle:nil)
+        menuTable.register(nibName, forCellReuseIdentifier: "MenuTableCell")
         menuTable.delegate = self
         menuTable.dataSource = self
     }
@@ -57,8 +59,8 @@ extension MenuVC: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as? MenuTableCell else{return UITableViewCell()}
-        cell.setupCell(title: rows[indexPath.section][indexPath.row])
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableCell") as? MenuTableCell else{return UITableViewCell()}
+        cell.setupCell(title: rows[indexPath.section][indexPath.row], imageName: imagesName[indexPath.section][indexPath.row])
        
         return cell
     }

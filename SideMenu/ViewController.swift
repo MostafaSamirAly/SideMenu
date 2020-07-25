@@ -19,9 +19,12 @@ class ViewController: UIViewController {
         let menu = MenuVC()
         menu.email    = "samir.mostafa868@gmail.com"
         menu.sections = ["Menu Items","Log Out"]
-        let section1  = ["History","Setting","Hamada"]
+        let section1  = ["History","Setting","Profile","Notification"]
         let section2  = ["LogOut"]
+        let images1   = ["history","setting","profile","notification"]
+        let images2   = ["logout"]
         menu.rows = [section1,section2]
+        menu.imagesName = [images1,images2]
         menu.selectionHandler = {indexPath in
             if indexPath.section == 0{
                 switch indexPath.row {
@@ -30,7 +33,9 @@ class ViewController: UIViewController {
                 case 1:
                     print("Setting")
                 case 2:
-                    print("Hamada")
+                    print("Profile")
+                case 3:
+                    print("Notification")
                 default:
                     print("Out Of Index")
                 }
