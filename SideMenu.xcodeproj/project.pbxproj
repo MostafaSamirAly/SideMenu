@@ -13,6 +13,10 @@
 		BF71E3EA24CC6C66001761C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF71E3E824CC6C66001761C4 /* Main.storyboard */; };
 		BF71E3EC24CC6C6F001761C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF71E3EB24CC6C6F001761C4 /* Assets.xcassets */; };
 		BF71E3EF24CC6C6F001761C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF71E3ED24CC6C6F001761C4 /* LaunchScreen.storyboard */; };
+		BF71E3F924CC6CB5001761C4 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71E3F724CC6CB5001761C4 /* MenuVC.swift */; };
+		BF71E3FA24CC6CB5001761C4 /* MenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF71E3F824CC6CB5001761C4 /* MenuVC.xib */; };
+		BF71E3FD24CC714D001761C4 /* MenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71E3FB24CC714D001761C4 /* MenuTableCell.swift */; };
+		BF71E3FE24CC714D001761C4 /* MenuTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF71E3FC24CC714D001761C4 /* MenuTableCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		BF71E3EB24CC6C6F001761C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF71E3EE24CC6C6F001761C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF71E3F024CC6C6F001761C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF71E3F724CC6CB5001761C4 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		BF71E3F824CC6CB5001761C4 /* MenuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuVC.xib; sourceTree = "<group>"; };
+		BF71E3FB24CC714D001761C4 /* MenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableCell.swift; sourceTree = "<group>"; };
+		BF71E3FC24CC714D001761C4 /* MenuTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		BF71E3E124CC6C65001761C4 /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				BF71E3F624CC6C8D001761C4 /* Menu */,
 				BF71E3E224CC6C65001761C4 /* AppDelegate.swift */,
 				BF71E3E424CC6C65001761C4 /* SceneDelegate.swift */,
 				BF71E3E624CC6C65001761C4 /* ViewController.swift */,
@@ -65,6 +74,17 @@
 				BF71E3F024CC6C6F001761C4 /* Info.plist */,
 			);
 			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		BF71E3F624CC6C8D001761C4 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				BF71E3F724CC6CB5001761C4 /* MenuVC.swift */,
+				BF71E3F824CC6CB5001761C4 /* MenuVC.xib */,
+				BF71E3FB24CC714D001761C4 /* MenuTableCell.swift */,
+				BF71E3FC24CC714D001761C4 /* MenuTableCell.xib */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF71E3EF24CC6C6F001761C4 /* LaunchScreen.storyboard in Resources */,
+				BF71E3FA24CC6CB5001761C4 /* MenuVC.xib in Resources */,
 				BF71E3EC24CC6C6F001761C4 /* Assets.xcassets in Resources */,
+				BF71E3FE24CC714D001761C4 /* MenuTableCell.xib in Resources */,
 				BF71E3EA24CC6C66001761C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,7 +161,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF71E3E724CC6C65001761C4 /* ViewController.swift in Sources */,
+				BF71E3F924CC6CB5001761C4 /* MenuVC.swift in Sources */,
 				BF71E3E324CC6C65001761C4 /* AppDelegate.swift in Sources */,
+				BF71E3FD24CC714D001761C4 /* MenuTableCell.swift in Sources */,
 				BF71E3E524CC6C65001761C4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
