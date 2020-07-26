@@ -15,6 +15,9 @@
 		BF71E3EF24CC6C6F001761C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF71E3ED24CC6C6F001761C4 /* LaunchScreen.storyboard */; };
 		BF71E3F924CC6CB5001761C4 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71E3F724CC6CB5001761C4 /* MenuVC.swift */; };
 		BF71E3FA24CC6CB5001761C4 /* MenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF71E3F824CC6CB5001761C4 /* MenuVC.xib */; };
+		BFE5681024CDA7DD001A7653 /* TransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5680F24CDA7DD001A7653 /* TransitionDelegate.swift */; };
+		BFE5681224CDA8A4001A7653 /* FadePushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5681124CDA8A4001A7653 /* FadePushAnimator.swift */; };
+		BFE5681424CDA94E001A7653 /* FadePopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5681324CDA94E001A7653 /* FadePopAnimator.swift */; };
 		BFFDB1A024CCB0C70028B348 /* MenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFDB19E24CCB0C70028B348 /* MenuTableCell.swift */; };
 		BFFDB1A124CCB0C70028B348 /* MenuTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFDB19F24CCB0C70028B348 /* MenuTableCell.xib */; };
 /* End PBXBuildFile section */
@@ -30,6 +33,9 @@
 		BF71E3F024CC6C6F001761C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF71E3F724CC6CB5001761C4 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		BF71E3F824CC6CB5001761C4 /* MenuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuVC.xib; sourceTree = "<group>"; };
+		BFE5680F24CDA7DD001A7653 /* TransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionDelegate.swift; sourceTree = "<group>"; };
+		BFE5681124CDA8A4001A7653 /* FadePushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadePushAnimator.swift; sourceTree = "<group>"; };
+		BFE5681324CDA94E001A7653 /* FadePopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadePopAnimator.swift; sourceTree = "<group>"; };
 		BFFDB19E24CCB0C70028B348 /* MenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableCell.swift; sourceTree = "<group>"; };
 		BFFDB19F24CCB0C70028B348 /* MenuTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +70,7 @@
 		BF71E3E124CC6C65001761C4 /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				BFE5680E24CDA7B4001A7653 /* AnimationHelpers */,
 				BF71E3F624CC6C8D001761C4 /* Menu */,
 				BF71E3E224CC6C65001761C4 /* AppDelegate.swift */,
 				BF71E3E424CC6C65001761C4 /* SceneDelegate.swift */,
@@ -85,6 +92,16 @@
 				BFFDB19F24CCB0C70028B348 /* MenuTableCell.xib */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		BFE5680E24CDA7B4001A7653 /* AnimationHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				BFE5680F24CDA7DD001A7653 /* TransitionDelegate.swift */,
+				BFE5681124CDA8A4001A7653 /* FadePushAnimator.swift */,
+				BFE5681324CDA94E001A7653 /* FadePopAnimator.swift */,
+			);
+			path = AnimationHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,9 +179,12 @@
 			files = (
 				BF71E3E724CC6C65001761C4 /* ViewController.swift in Sources */,
 				BF71E3F924CC6CB5001761C4 /* MenuVC.swift in Sources */,
+				BFE5681424CDA94E001A7653 /* FadePopAnimator.swift in Sources */,
 				BF71E3E324CC6C65001761C4 /* AppDelegate.swift in Sources */,
+				BFE5681024CDA7DD001A7653 /* TransitionDelegate.swift in Sources */,
 				BFFDB1A024CCB0C70028B348 /* MenuTableCell.swift in Sources */,
 				BF71E3E524CC6C65001761C4 /* SceneDelegate.swift in Sources */,
+				BFE5681224CDA8A4001A7653 /* FadePushAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

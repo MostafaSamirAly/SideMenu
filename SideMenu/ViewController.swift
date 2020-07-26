@@ -9,10 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    let transitionDelegate: UIViewControllerTransitioningDelegate = TransitionDelegate()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.transitioningDelegate = transitionDelegate
     }
 
     @IBAction func showMenuAction(_ sender: Any) {
@@ -43,17 +44,18 @@ class ViewController: UIViewController {
                 print("Log Out")
             }
         }
-        presentView(menu: menu)
-    }
-    
-    private func presentView(menu:UIViewController){
-        let transition = CATransition()
-        transition.duration = 0.5
-        transition.type = CATransitionType.moveIn
-        transition.subtype = CATransitionSubtype.fromLeft
-        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeOut)
-        view.window!.layer.add(transition, forKey: kCATransition)
+        menu.transitioningDelegate = transitionDelegate
         self.present(menu, animated: true, completion: nil)
     }
+    
+//    private func presentView(menu:UIViewController){
+//        let transition = CATransition()
+//        transition.duration = 0.5
+//        transition.type = CATransitionType.moveIn
+//        transition.subtype = CATransitionSubtype.fromLeft
+//        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeOut)
+//        view.window!.layer.add(transition, forKey: kCATransition)
+//        self.present(menu, animated: true, completion: nil)
+//    }
 }
 
