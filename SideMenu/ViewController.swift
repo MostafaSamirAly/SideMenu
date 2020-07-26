@@ -43,6 +43,16 @@ class ViewController: UIViewController {
                 print("Log Out")
             }
         }
+        presentView(menu: menu)
+    }
+    
+    private func presentView(menu:UIViewController){
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = CATransitionType.moveIn
+        transition.subtype = CATransitionSubtype.fromLeft
+        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeOut)
+        view.window!.layer.add(transition, forKey: kCATransition)
         self.present(menu, animated: true, completion: nil)
     }
 }
